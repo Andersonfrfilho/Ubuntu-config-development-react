@@ -2,7 +2,9 @@
 
 1. mount pendrive boot with gpt
    * obs: due to the new 9th generation processors and processes, we must use the following pen drive boot configurations using the rufus, important
+   
 <hr/>
+
 2. install curl
    * update packages linux and system
      - ```sudo apt update```
@@ -11,7 +13,9 @@
      - ```sudo apt install curl```
    * testing success
      - ```curl --version```
+     
 <hr/> 
+
 3. install docker
    * update packages linux
      - ```sudo apt-get update```
