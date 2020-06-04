@@ -27,8 +27,10 @@
      - ```sudo systemctl start docker```
      - ```sudo systemctl enable docker```
    * Testing success
-     - ```docker --version```  
+     - ```docker --version```
+     
 <hr/>
+
 4. install Node (NVM)
    * install with curl 
      - ```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash```
@@ -38,7 +40,9 @@
      - ```nvm install --lts```
    * use version image
      - ```nvm use --lts```
+     
 <hr/>
+
 5. install Yarn/NPM
    * install npm
      - ```sudo apt install npm```
@@ -48,7 +52,9 @@
      - ```sudo npm install yarn –g```
    * testing success
      - ```yarn --version```
-<hr/>   
+     
+<hr/>
+
 6. install Git
    * update packages linux
       - ```sudo apt-get update```
@@ -60,4 +66,5 @@
      - ```git config --global user.name "testuser" without aspas```
      - ```git config --global user.email "testuser@example.com" without aspas```
    * referencia <https://www.liquidweb.com/kb/install-git-ubuntu-16-04-lts/>
+   
 <hr/>
