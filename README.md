@@ -163,3 +163,38 @@
    
      - ```sudo usermod -s /usr/bin/zsh $(whoami)```
    
+8. install Android Studio and configure enviroment
+   - Install java JDK
+     - ```sudo apt install openjdk-8-jdk```
+     - test instalation
+       - ```java --version```
+   - Download Android studio
+     - ```wget https://dl.google.com/dl/android/studio/ide-zips/3.4.0.18/android-studio-ide-183.5452501-linux.tar.gz```
+   - Install package
+     - ```sudo tar -xvzf android-studio-ide-183.5452501-linux.tar.gz```
+   - Execute comands
+     - ```cd android-studio```
+     - ```cd bin```
+     - ```./studio.sh```
+     - choice options e go to config adb/sdk_options/Licensys agree licenses
+     - execute code .bashrc past in last lines
+       - ```
+          export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+
+          export ANDROID_HOME=$HOME/Android/Sdk
+
+          export PATH=$PATH:$ANDROID_HOME/emulator
+
+          export PATH=$PATH:$ANDROID_HOME/tools
+
+          export PATH=$PATH:$ANDROID_HOME/tools/bin
+
+          export PATH=$PATH:$ANDROID_HOME/platform-tools
+         ```
+     - in /home with terminal execute comand
+       - ```source .bashrc```
+   - Install dependencies
+     - ```sudo apt install android-tools-adb android-tools-fastboot```
+   
+   
+   
