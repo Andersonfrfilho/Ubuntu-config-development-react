@@ -86,33 +86,65 @@
      - paste json config
      ```json
       {
-          //Defini o tema e icones
-          "workbench.colorTheme": "Dracula",
-          "workbench.iconTheme": "material-icon-theme",
-          //Aumenta font terminal
-          "terminal.integrated.fontSize":14,
+        //Defini o tema e icones
+        "workbench.colorTheme": "Dracula",
+        "workbench.iconTheme": "material-icon-theme",
+        //Aumenta font terminal
+        "terminal.integrated.fontSize":14,
 
-          //Configura tamanho e familia da fonte
-          "editor.tabSize":2,
-          "editor.fontSize": 14,
-          "editor.lineHeight": 24,
-          "editor.fontFamily": "Fira Code",
-          "editor.fontLigatures":true,
+        //Configura tamanho e familia da fonte
+        "editor.tabSize":2,
+        "editor.fontSize": 14,
+        "editor.lineHeight": 24,
+        "editor.fontFamily": "Fira Code",
+        "editor.fontLigatures":true,
 
-          "explorer.compactFolders": false,
-          "editor.renderLineHighlight":"gutter",
-          "workbench.editor.labelFormat":"short",
+        "explorer.compactFolders": false,
+        "editor.renderLineHighlight":"gutter",
+        "workbench.editor.labelFormat":"short",
 
-          "javascript.updateImportsOnFileMove.enabled":"never",
+        "javascript.updateImportsOnFileMove.enabled":"never",
 
-          "breadcrumbs.enabled":true,
-          "editor.parameterHints.enabled":false,
-          "typescript.updateImportsOnFileMove.enabled":"never",
-          "explorer.confirmDragAndDrop":false,
-          "explorer.confirmDelete":false,
+        "breadcrumbs.enabled":true,
+        "editor.parameterHints.enabled":false,
+        "typescript.updateImportsOnFileMove.enabled":"never",
+        "explorer.confirmDragAndDrop":false,
+        "explorer.confirmDelete":false,
+        "editor.rulers":[80,120],
+        "terminal.integrated.shell.linux": "/bin/zsh",
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true
+        },
+        "emmet.syntaxProfiles": { "javascript": "jsx" },
+        "emmet.includeLanguages": { "javascript": "javascriptreact" },
+        "files.associations": {
+          ".sequelizerc": "javascript",
+          ".stylelintrc": "json",
+          ".prettierrc": "json"
+        },
+        "material-icon-theme.folders.associations": {
+          "infra": "app",
+          "entities": "class",
+          "schemas": "class",
+          "typeorm": "database",
+          "repositories": "mappings",
+          "http": "container",
+          "migrations": "tools",
+          "modules": "components",
+          "implementations": "core",
+          "dtos": "typescript",
+          "fakes": "mock",
+          "websockets": "pipe",
+          "protos": "pipe",
+          "grpc": "pipe"
+        },
 
-          "editor.rulers":[80,120]
-        }
+        "material-icon-theme.files.associations": {
+          "ormconfig.json": "database",
+          "tsconfig.json": "tune",
+          "*.proto": "3d"
+        },
+      }
       ```
 8. install zsh
    * use comand
