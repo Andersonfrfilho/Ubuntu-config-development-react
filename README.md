@@ -1,4 +1,4 @@
-# Ubuntu-config-development
+# Ubuntu-config-development (GNU=Ubuntu config)(Linux=[terminal,zsh])
 
 1. mount pendrive boot with gpt
    * obs: due to the new 9th generation processors and processes, we must use the following pen drive boot configurations using the rufus, important
@@ -229,5 +229,9 @@
    - Install dependencies
      - ```sudo apt install android-tools-adb android-tools-fastboot```
    
-   
+   - Comands git
+     - access develop
+     - run git pull
+     - back to branch
+     - run git merge develop
    
