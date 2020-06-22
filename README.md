@@ -1,4 +1,5 @@
-# Ubuntu-config-development (GNU=Ubuntu config)(Linux=[terminal,zsh])
+# Ubuntu-config-development 
+  - (GNU=Ubuntu config)(Linux=[terminal,zsh])
 
 1. mount pendrive boot with gpt
    * obs: due to the new 9th generation processors and processes, we must use the following pen drive boot configurations using the rufus, important
@@ -16,7 +17,7 @@
      
 <hr/> 
 
-3. install docker
+3. install docker,docker-compose, docker-machine
    * update packages linux
      - ```sudo apt-get update```
    * **(opcional) case remove oldest versions** 
@@ -30,6 +31,25 @@
      - ```docker --version```
    * Referencies
      - ```https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket```
+     
+   <hr/>
+   * **Optional**
+   * Install docker-compose 
+     - ```sudo apt install docker-compose```
+   * Install docker-machine
+     - ```
+          base=https://github.com/docker/machine/releases/download/v0.16.0 &&         
+          curl -L $base/docker-machine-$(uname -s)-$(uname -m) >/tmp/docker-machine &&
+          sudo mv /tmp/docker-machine /usr/local/bin/docker-machine &&
+          chmod +x /usr/local/bin/docker-machine
+       ```
+   * testing 
+     - ```docker-machine version```
+   * create machine default
+     - install virtual-box
+       - ```sudo apt-get install virtualbox```
+     - isntall machine default -d second plan, 
+       - ```docker-machine create -d virtualbox temp.sysadmin.local```
 <hr/>
 
 4. install Node (NVM)
