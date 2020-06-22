@@ -49,6 +49,9 @@
        - ```sudo apt-get install virtualbox```
      - isntall machine default -d second plan, 
        - ```docker-machine create -d virtualbox temp.sysadmin.local```
+       - path
+         - ```eval $(docker-machine env temp.sysadmin.local)```
+         - ```docker-machine env temp.sysadmin.local ```
 <hr/>
 
 4. install Node (NVM)
