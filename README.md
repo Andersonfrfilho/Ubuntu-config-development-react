@@ -52,6 +52,8 @@
        - path
          - ```eval $(docker-machine env temp.sysadmin.local)```
          - ```docker-machine env temp.sysadmin.local ```
+     - initial machine default
+       - ```docker-machine start default```
 <hr/>
 
 4. install Node (NVM)
