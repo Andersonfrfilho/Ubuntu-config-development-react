@@ -54,6 +54,9 @@
          - ```docker-machine env temp.sysadmin.local ```
      - initial machine default
        - ```docker-machine start default```
+   * Back Docker-LocalMachine return enviroment variable
+     - este comando troca para o docker local
+     - ```eval "$(docker-machine env -u)"```
 <hr/>
 
 4. install Node (NVM)
