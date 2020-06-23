@@ -256,11 +256,13 @@
    - Install dependencies
      - ```sudo apt install android-tools-adb android-tools-fastboot```
    
-   - Comands git
+   - **Comands commons** 
+   - git
      - access develop
      - run git pull
      - back to branch
      - run git merge develop
+   - Node
      - kill process nodeJs
        * case netstat command not found
          - ``sudo apt-get install net-tools```
