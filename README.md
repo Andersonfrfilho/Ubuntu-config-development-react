@@ -261,4 +261,11 @@
      - run git pull
      - back to branch
      - run git merge develop
+     - kill process nodeJs
+       * case netstat command not found
+         - ``sudo apt-get install net-tools```
+       - see a process in port
+         * ```sudo netstat -lpn |grep :'3000'```
+       - kill the id process without aspas
+         * ```kill -9 id_process```
    
