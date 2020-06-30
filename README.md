@@ -237,7 +237,7 @@
      - ```cd bin```
      - ```./studio.sh```
      - choice options e go to config adb/sdk_options/Licensys agree licenses
-     - execute code .bashrc past in last lines
+     - execute ```code .bashrc``` or ```code .zshrc``` past in last lines
        - ```
           export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
@@ -253,8 +253,9 @@
          ```
      - in /home with terminal execute comand in bash 
        - ```source .bashrc```
+     
      - or zsh  
-       - ```code .zshrc```
+       - ```source .zshrc```
          - case problem use
            - ```sudo code . ~/.zshrc --user-data-dir='.'```
    - Install dependencies
