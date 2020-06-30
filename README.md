@@ -261,6 +261,13 @@
    - Install dependencies
      - ```sudo apt install android-tools-adb android-tools-fastboot```
    
+   - Open Android Studio, install emulator and initialized
+     - ```cd android-studio;cd bin;./studio.sh```
+     - in config/sdk_manager/Android_SDK/SDK_tools
+       - ```select Google play licenses sdk tools```
+       - ```acept terms```
+     - in config/abd_manager/initialized one emulator
+     
    - **Comands commons** 
    - git
      - access develop
