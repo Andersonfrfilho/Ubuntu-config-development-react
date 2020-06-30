@@ -251,8 +251,12 @@
 
           export PATH=$PATH:$ANDROID_HOME/platform-tools
          ```
-     - in /home with terminal execute comand
+     - in /home with terminal execute comand in bash 
        - ```source .bashrc```
+     - or zsh  
+       - ```code .zshrc```
+         - case problem use
+           - ```sudo code . ~/.zshrc --user-data-dir='.'```
    - Install dependencies
      - ```sudo apt install android-tools-adb android-tools-fastboot```
    
