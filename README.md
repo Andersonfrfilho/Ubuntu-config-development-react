@@ -277,9 +277,14 @@
    - **Comands commons** 
    - git
      - access develop
-     - run git pull
+       - ```git checkout branch_name```
+     - run 
+       - ```git pull```
+     
      - back to branch
+       - ```git checkout branch_name```
      - run git merge develop
+       - ```git merge branch_name```
    - Node
      - kill process nodeJs
        * case netstat command not found
