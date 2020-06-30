@@ -267,7 +267,13 @@
        - ```select Google play licenses sdk tools```
        - ```acept terms```
      - in config/abd_manager/initialized one emulator
-     
+   - Common Problemns
+     - Unable to load script from assets 'index.android.bundle'. Make sure...
+       * Esse erro geralmente acontece porque o sistema não conseguiu criar o bundle inicial que contém todo o código Javascript da aplicação. Para resolver comece criando uma pasta ```assets``` dentro da pasta ```android/app/src/main```.
+       * Logo após, execute o comando:
+         - ```npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/```
+        * Agora, feche as abas do terminal e execute novamente o comando:
+          - ```npx react-native run-android``` **or** ```yarn run react-native run-android``` **or** ```yarn android```
    - **Comands commons** 
    - git
      - access develop
