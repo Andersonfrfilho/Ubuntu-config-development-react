@@ -274,7 +274,7 @@
          - ```npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/```
         * Agora, feche as abas do terminal e execute novamente o comando:
           - ```npx react-native run-android``` **or** ```yarn run react-native run-android``` **or** ```yarn android```
-   - **Comands commons** 
+   - **Comands commons que salvam xD** 
    - git
      - access develop
        - ```git checkout branch_name```
@@ -294,3 +294,9 @@
        - kill the id process without aspas
          * ```kill -9 id_process```
    
+   - Problems with emulator in projects react-native, when install dependencia, or bundle not start
+      - Register bundle
+        - ```npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/```
+      - reset cache
+        - ```cd android;./gradlew clean;cd ..;npx react-native run-android;npx react-native start --reset-cache;```
+      
