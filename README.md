@@ -299,4 +299,5 @@
         - ```npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/```
       - reset cache
         - ```cd android;./gradlew clean;cd ..;npx react-native run-android;npx react-native start --reset-cache;```
-      
+      - link assets
+        - ```npx react-native link```
