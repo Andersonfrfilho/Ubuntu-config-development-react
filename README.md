@@ -1,4 +1,4 @@
-# Ubuntu-config-development 
+# Linux-Zsh-GNU-Ubuntu-config-development 
   - (GNU=Ubuntu config)(Linux=[terminal,zsh])
 
 1. mount pendrive boot with gpt
@@ -72,8 +72,11 @@
 <hr/>
 
 5. install Yarn/NPM
-   * install npm
-     - ```sudo apt install npm```
+   * On Debian or Ubuntu Linux, you can install Yarn via our Debian package repository. You will first need to configure the repository:
+     - ```curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -```
+     - ```echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list```
+     - ```sudo apt update && sudo apt install yarn```
+     
    * testing success
      - ```npm ––version```
    * install yarn 
