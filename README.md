@@ -176,6 +176,8 @@
         },
       }
       ```
+      - install extensions live shared
+        - ```wget -O ~/vsls-reqs https://aka.ms/vsls-linux-prereq-script && chmod +x ~/vsls-reqs && ~/vsls-reqs```
 8. install zsh
    * use comand
      - ```sudo apt-get install zsh
