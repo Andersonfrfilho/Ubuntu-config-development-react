@@ -306,3 +306,6 @@
         - ```cd android;./gradlew clean;cd ..;npx react-native run-android;npx react-native start --reset-cache;```
       - link assets
         - ```npx react-native link```
+   - Force kill process
+     - alt + f2
+     - click in program 
