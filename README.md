@@ -5,116 +5,93 @@
    * obs: due to the new 9th generation processors and processes, we must use the following pen drive boot configurations using the rufus, important
    
 <hr/>
-
-2. install curl
-   * update packages linux and system
-     - ```sudo apt update```
-     - ```sudo apt upgrade```
-   * install curl 
+2. Install zsh
+   - Update the packages
+      - ```sudo apt update```
+   - Install zsh
+      - ```sudo apt install zsh```
+   - Install curl 
      - ```sudo apt install curl```
-   * testing success
-     - ```curl --version```
-     
-<hr/> 
-
-3. install docker,docker-compose, docker-machine
-   * update packages linux
-     - ```sudo apt-get update```
-   * **(opcional) case remove oldest versions** 
-     - ```sudo apt-get remove docker docker-engine docker.io```
-   * install docker package
-     - ```sudo apt install docker.io```
-   * Start and Automate Docker, the Docker service needs to be setup to run at startup. To do so, type in each command followed by enter
-     - ```sudo systemctl start docker```
-     - ```sudo systemctl enable docker```
-   * Testing success
-     - ```docker --version```
-   * Referencies
-     - ```https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket```
-
-   * **Optional**
-   * Install docker-compose 
-     - ```sudo apt install docker-compose```
-   * Install docker-machine
-     - ```
-          base=https://github.com/docker/machine/releases/download/v0.16.0 &&         
-          curl -L $base/docker-machine-$(uname -s)-$(uname -m) >/tmp/docker-machine &&
-          sudo mv /tmp/docker-machine /usr/local/bin/docker-machine &&
-          chmod +x /usr/local/bin/docker-machine
-       ```
-   * testing 
-     - ```docker-machine version```
-   * create machine default
-     - install virtual-box
-       - ```sudo apt-get install virtualbox```
-     - isntall machine default -d second plan, 
-       - ```docker-machine create -d virtualbox temp.sysadmin.local```
-       - path
-         - ```eval $(docker-machine env temp.sysadmin.local)```
-         - ```docker-machine env temp.sysadmin.local ```
-     - initial machine default
-       - ```docker-machine start default```
-   * Back Docker-LocalMachine return enviroment variable
-     - este comando troca para o docker local
-     - ```eval "$(docker-machine env -u)"```
-<hr/>
-
-4. install Node (NVM)
-   * install with curl 
-     - ```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash```
-   * instance envoriment variable
-     - ```export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm```
-   * install version image do node
-     - ```nvm install --lts```
-   * use version image
-     - ```nvm use --lts```
-     
-<hr/>
-
-5. install Yarn/NPM
-   * On Debian or Ubuntu Linux, you can install Yarn via our Debian package repository. You will first need to configure the repository:
-     - ```curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -```
-     - ```echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list```
-     - ```sudo apt update && sudo apt install yarn```
-     
-   * testing success
-     - ```npm ––version```
-   * install yarn 
-     - ```sudo npm install yarn –g```
-   * testing success
-     - ```yarn --version```
-     
-<hr/>
-
-6. install Git
-   * update packages linux
-      - ```sudo apt-get update```
-   * install package git-core
-     - ```sudo apt-get install git-core```
-   * testing success
-     - ``git --version```
-   * config enviroment global git 
-     - ```git config --global user.name "testuser" without aspas```
-     - ```git config --global user.email "testuser@example.com" without aspas```
-   * referencia <https://www.liquidweb.com/kb/install-git-ubuntu-16-04-lts/>
-   
-<hr/>
-
-7. install font fira-code
-   * https://github.com/tonsky/FiraCode
-   
-7. install visual code
-   * download do visual studio code 
-     - ```https://code.visualstudio.com/Download```
-   * in file on download dpkg using comand
-     - ```sudo dpkg -i code_1.26.0-1534177765_amd64.deb```
-   
-   * configure isntall extension
-     - Material Icon
-     - Dracula theme
-   * configure JSON preferences shift + ctrl + p = JSON.preference
-     - paste json config
-     ```json
+   - Install git
+     - ```sudo apt install git-all```
+   - Zsh default terminal
+     - ```chsh -s $(which zsh)```
+   - Install Firacode font
+     - download in repository
+       - ```https://github.com/tonsky/FiraCode```   
+   - Install Oh my zsh
+     - ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
+   - Install SpaceshipTheme
+     - clone reposiory in ~
+       - ```git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"```
+     - linking repository
+       - ```ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"```
+    - Instal visual code
+      - download visual studio code
+        - ```https://code.visualstudio.com/download```
+      - open folder download archive
+      - run command
+        - ```sudo dpkg -i code...```
+    - Configure theme zsh
+      - in folder ~ with terminal
+        - ```code ./.zshrc```
+      - in file replace `ZSH_THEME="robbyrussell"`
+        - ```ZSH_THEME="spaceship"```
+    - Install plugins zsh
+      - run comand
+        - ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"```
+      - restart terminal
+      - open .zshrc, and add file
+        - ```zinit light zdharma/fast-syntax-highlighting
+             zinit light zsh-users/zsh-autosuggestions
+             zinit light zsh-users/zsh-completions
+          ```
+      - restart terminal
+    - Install nvm
+      - run command
+        - ```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash```
+      - add file profile enviroment variable nvm past in .zshrc or .bashrc
+        - ```export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+          ```
+      - install node 
+        - ```nvm install --lts```
+      - use node
+        - ```nvm use --lts```
+    - Install Yarn
+      - run comand to add package repository
+        - ```curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -```
+      - write file
+        - ```echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list```
+      - install yarn
+        - ```sudo apt update && sudo apt install --no-install-recommends yarn```
+    - Install jdk8
+      - add package
+        - ```sudo add-apt-repository ppa:openjdk-r/ppa```
+      - update packages
+        - ```sudo apt-get update```
+      - install package
+        - ```sudo apt-get install openjdk-8-jdk```
+      - install drives x86
+        - ```sudo apt-get install gcc-multilib lib32z1 lib32stdc++6```
+    - Install Android Stuio
+      - download Android Studio.tar.gz
+      - extract file in directori `~` where home/user
+      - create a file in `~/Android/Sdk`
+      - add profile file `.zshrc`
+      - add ```export PATH=$PATH:~/android-studio/bin```
+      - add in before alias coment ```alias sudo='sudo env PATH=$PATH $@'```
+      - run terminal ```studio.sh```
+      - not import config
+      - send realtory
+      - (welcome) next
+      - (install type) custom
+      - select JAVA_HOME
+      - using visual code for open files ```sudo code . --user-data-dir='.'```
+      - add variables envoriment in bash/.bashrc file
+    - Configure visual code
+      - `shift` + `ctrl` + `p` find JSON preferenes
+      -      ```json
       {
         //Defini o tema e icones
         "workbench.colorTheme": "Dracula",
@@ -176,57 +153,52 @@
         },
       }
       ```
-      - install extensions live shared
-        - ```wget -O ~/vsls-reqs https://aka.ms/vsls-linux-prereq-script && chmod +x ~/vsls-reqs && ~/vsls-reqs```
-8. install zsh
-   * use comand
-     - ```sudo apt-get install zsh
-   * define temrinal default
-      - ```bash -c zsh```
-   * Instalar oh-my-zsh
-     - ```sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
-   * Install spaceship
-     - ```git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"```
-   * symlink
-     - ```ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"```
+     - install extensions live shared
+       - ```wget -O ~/vsls-reqs https://aka.ms/vsls-linux-prereq-script && chmod +x ~/vsls-reqs && ~/vsls-reqs```
+     
+<hr/> 
 
-     - case problem use
-       - ```sudo code . ~/.zshrc --user-data-dir='.'```
-   * config file
-     - define theme
-       - ```ZSH_THEME="spaceship"```
-     - ```json
-        SPACESHIP_PROMPT_ORDER=(
-          user          # Username section
-          dir           # Current directory section
-          host          # Hostname section
-          git           # Git section (git_branch + git_status)
-          hg            # Mercurial section (hg_branch  + hg_status)
-          exec_time     # Execution time
-          line_sep      # Line break
-          vi_mode       # Vi-mode indicator
-          jobs          # Background jobs indicator
-          exit_code     # Exit code section
-          char          # Prompt character
-        )
-        SPACESHIP_USER_SHOW=always
-        SPACESHIP_PROMPT_ADD_NEWLINE=false
-        SPACESHIP_CHAR_SYMBOL="❯"
-        SPACESHIP_CHAR_SUFFIX=" "
-        ```
-     - add in files
-       - ```json
-       zinit light zdharma/fast-syntax-highlighting
-       zinit light zsh-users/zsh-autosuggestions
-       zinit light zsh-users/zsh-completions
+3. install docker,docker-compose, docker-machine
+   * update packages linux
+     - ```sudo apt-get update```
+   * **(opcional) case remove oldest versions** 
+     - ```sudo apt-get remove docker docker-engine docker.io```
+   * install docker package
+     - ```sudo apt install docker.io```
+   * Start and Automate Docker, the Docker service needs to be setup to run at startup. To do so, type in each command followed by enter
+     - ```sudo systemctl start docker```
+     - ```sudo systemctl enable docker```
+   * Testing success
+     - ```docker --version```
+   * Referencies
+     - ```https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket```
+
+   * **Optional**
+   * Install docker-compose 
+     - ```sudo apt install docker-compose```
+   * Install docker-machine
+     - ```
+          base=https://github.com/docker/machine/releases/download/v0.16.0 &&         
+          curl -L $base/docker-machine-$(uname -s)-$(uname -m) >/tmp/docker-machine &&
+          sudo mv /tmp/docker-machine /usr/local/bin/docker-machine &&
+          chmod +x /usr/local/bin/docker-machine
        ```
-   - add temrinal visual code preference
-     
-     - ```"terminal.integrated.shell.osx": "/bin/zsh"```
-     
-   - transform default terminal zsh in terminal
-   
-     - ```sudo usermod -s /usr/bin/zsh $(whoami)```
+   * testing 
+     - ```docker-machine version```
+   * create machine default
+     - install virtual-box
+       - ```sudo apt-get install virtualbox```
+     - isntall machine default -d second plan, 
+       - ```docker-machine create -d virtualbox temp.sysadmin.local```
+       - path
+         - ```eval $(docker-machine env temp.sysadmin.local)```
+         - ```docker-machine env temp.sysadmin.local ```
+     - initial machine default
+       - ```docker-machine start default```
+   * Back Docker-LocalMachine return enviroment variable
+     - este comando troca para o docker local
+     - ```eval "$(docker-machine env -u)"```
+<hr/>
    
 8. install Android Studio and configure enviroment
    - Install java JDK
