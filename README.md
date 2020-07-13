@@ -41,6 +41,25 @@
       - run comand
         - ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"```
       - restart terminal
+      - open zshrc add in file
+     - ```SPACESHIP_PROMPT_ORDER=(
+            user          # Username section
+            dir           # Current directory section
+            host          # Hostname section
+            git           # Git section (git_branch + git_status)
+            hg            # Mercurial section (hg_branch  + hg_status)
+            exec_time     # Execution time
+            line_sep      # Line break
+            vi_mode       # Vi-mode indicator
+            jobs          # Background jobs indicator
+            exit_code     # Exit code section
+            char          # Prompt character
+          )
+          SPACESHIP_USER_SHOW=always
+          SPACESHIP_PROMPT_ADD_NEWLINE=false
+          SPACESHIP_CHAR_SYMBOL="❯"
+          SPACESHIP_CHAR_SUFFIX=" " 
+          ```
       - open .zshrc, and add file
         - ```zinit light zdharma/fast-syntax-highlighting
              zinit light zsh-users/zsh-autosuggestions
@@ -168,6 +187,14 @@
    * Start and Automate Docker, the Docker service needs to be setup to run at startup. To do so, type in each command followed by enter
      - ```sudo systemctl start docker```
      - ```sudo systemctl enable docker```
+     - Create the docker group if it does not exist
+     - ```sudo groupadd docker```
+     - Add your user to the docker group.
+     - ```sudo usermod -aG docker $USER```
+     - Run the following command or Logout and login again and run (that doesn't work you may need to reboot your machine first)
+     - ```newgrp docker```
+     - Check if docker can be run without root
+     - ```docker run hello-world```
    * Testing success
      - ```docker --version```
    * Referencies
