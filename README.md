@@ -1,5 +1,5 @@
 # Linux-Zsh-GNU-Ubuntu-config-development 
-  - (GNU=Ubuntu config)(Linux=[terminal,zsh])
+  - (GNU=Ubuntu config)(Linux=[terminal,zsh]) - RUFUS
 
 1. mount pendrive boot with gpt
    * obs: due to the new 9th generation processors and processes, we must use the following pen drive boot configurations using the rufus, important
