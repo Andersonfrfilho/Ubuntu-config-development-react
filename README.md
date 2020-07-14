@@ -5,6 +5,7 @@
    * obs: due to the new 9th generation processors and processes, we must use the following pen drive boot configurations using the rufus, important
    
 <hr/>
+
 2. Install zsh
    - Update the packages
       - ```sudo apt update```
@@ -42,25 +43,26 @@
         - ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"```
       - restart terminal
       - open zshrc add in file
-     - ```SPACESHIP_PROMPT_ORDER=(
-            user          # Username section
-            dir           # Current directory section
-            host          # Hostname section
-            git           # Git section (git_branch + git_status)
-            hg            # Mercurial section (hg_branch  + hg_status)
-            exec_time     # Execution time
-            line_sep      # Line break
-            vi_mode       # Vi-mode indicator
-            jobs          # Background jobs indicator
-            exit_code     # Exit code section
-            char          # Prompt character
+    - ```
+          SPACESHIP_PROMPT_ORDER=(
+          user          # Username section
+          dir           # Current directory section
+          host          # Hostname section
+          git           # Git section (git_branch + git_status)
+          hg            # Mercurial section (hg_branch  + hg_status)
+          exec_time     # Execution time
+          line_sep      # Line break
+          vi_mode       # Vi-mode indicator
+          jobs          # Background jobs indicator
+          exit_code     # Exit code section
+          char          # Prompt character
           )
           SPACESHIP_USER_SHOW=always
           SPACESHIP_PROMPT_ADD_NEWLINE=false
           SPACESHIP_CHAR_SYMBOL="❯"
           SPACESHIP_CHAR_SUFFIX=" " 
-          ```
-      - open .zshrc, and add file
+       ```
+      - open `.zshrc`, and add file
         - ```zinit light zdharma/fast-syntax-highlighting
              zinit light zsh-users/zsh-autosuggestions
              zinit light zsh-users/zsh-completions
@@ -110,71 +112,70 @@
       - add variables envoriment in bash/.bashrc file
     - Configure visual code
       - `shift` + `ctrl` + `p` find JSON preferenes
-      -      ```json
-      {
-        //Defini o tema e icones
-        "workbench.colorTheme": "Dracula",
-        "workbench.iconTheme": "material-icon-theme",
-        //Aumenta font terminal
-        "terminal.integrated.fontSize":14,
+      - ```json
+        {
+          //Defini o tema e icones
+          "workbench.colorTheme": "Dracula",
+          "workbench.iconTheme": "material-icon-theme",
+          //Aumenta font terminal
+          "terminal.integrated.fontSize":14,
 
-        //Configura tamanho e familia da fonte
-        "editor.tabSize":2,
-        "editor.fontSize": 14,
-        "editor.lineHeight": 24,
-        "editor.fontFamily": "Fira Code",
-        "editor.fontLigatures":true,
+          //Configura tamanho e familia da fonte
+          "editor.tabSize":2,
+          "editor.fontSize": 14,
+          "editor.lineHeight": 24,
+          "editor.fontFamily": "Fira Code",
+          "editor.fontLigatures":true,
 
-        "explorer.compactFolders": false,
-        "editor.renderLineHighlight":"gutter",
-        "workbench.editor.labelFormat":"short",
+          "explorer.compactFolders": false,
+          "editor.renderLineHighlight":"gutter",
+          "workbench.editor.labelFormat":"short",
 
-        "javascript.updateImportsOnFileMove.enabled":"never",
+          "javascript.updateImportsOnFileMove.enabled":"never",
 
-        "breadcrumbs.enabled":true,
-        "editor.parameterHints.enabled":false,
-        "typescript.updateImportsOnFileMove.enabled":"never",
-        "explorer.confirmDragAndDrop":false,
-        "explorer.confirmDelete":false,
-        "editor.rulers":[80,120],
-        "terminal.integrated.shell.linux": "/bin/zsh",
-        "editor.codeActionsOnSave": {
-          "source.fixAll.eslint": true
-        },
-        "emmet.syntaxProfiles": { "javascript": "jsx" },
-        "emmet.includeLanguages": { "javascript": "javascriptreact" },
-        "files.associations": {
-          ".sequelizerc": "javascript",
-          ".stylelintrc": "json",
-          ".prettierrc": "json"
-        },
-        "material-icon-theme.folders.associations": {
-          "infra": "app",
-          "entities": "class",
-          "schemas": "class",
-          "typeorm": "database",
-          "repositories": "mappings",
-          "http": "container",
-          "migrations": "tools",
-          "modules": "components",
-          "implementations": "core",
-          "dtos": "typescript",
-          "fakes": "mock",
-          "websockets": "pipe",
-          "protos": "pipe",
-          "grpc": "pipe"
-        },
+          "breadcrumbs.enabled":true,
+          "editor.parameterHints.enabled":false,
+          "typescript.updateImportsOnFileMove.enabled":"never",
+          "explorer.confirmDragAndDrop":false,
+          "explorer.confirmDelete":false,
+          "editor.rulers":[80,120],
+          "terminal.integrated.shell.linux": "/bin/zsh",
+          "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+          },
+          "emmet.syntaxProfiles": { "javascript": "jsx" },
+          "emmet.includeLanguages": { "javascript": "javascriptreact" },
+          "files.associations": {
+            ".sequelizerc": "javascript",
+            ".stylelintrc": "json",
+            ".prettierrc": "json"
+          },
+          "material-icon-theme.folders.associations": {
+            "infra": "app",
+            "entities": "class",
+            "schemas": "class",
+            "typeorm": "database",
+            "repositories": "mappings",
+            "http": "container",
+            "migrations": "tools",
+            "modules": "components",
+            "implementations": "core",
+            "dtos": "typescript",
+            "fakes": "mock",
+            "websockets": "pipe",
+            "protos": "pipe",
+            "grpc": "pipe"
+          },
 
-        "material-icon-theme.files.associations": {
-          "ormconfig.json": "database",
-          "tsconfig.json": "tune",
-          "*.proto": "3d"
-        },
-      }
-      ```
+          "material-icon-theme.files.associations": {
+            "ormconfig.json": "database",
+            "tsconfig.json": "tune",
+            "*.proto": "3d"
+          },
+        }
+        ```
      - install extensions live shared
        - ```wget -O ~/vsls-reqs https://aka.ms/vsls-linux-prereq-script && chmod +x ~/vsls-reqs && ~/vsls-reqs```
-     
 <hr/> 
 
 3. install docker,docker-compose, docker-machine
@@ -227,57 +228,6 @@
      - ```eval "$(docker-machine env -u)"```
 <hr/>
    
-8. install Android Studio and configure enviroment
-   - Install java JDK
-     - ```sudo apt install openjdk-8-jdk```
-     - test instalation
-       - ```java --version```
-   - Download Android studio
-     - ```wget https://dl.google.com/dl/android/studio/ide-zips/3.4.0.18/android-studio-ide-183.5452501-linux.tar.gz```
-   - Install package
-     - ```sudo tar -xvzf android-studio-ide-183.5452501-linux.tar.gz```
-   - Execute comands
-     - ```cd android-studio```
-     - ```cd bin```
-     - ```./studio.sh```
-     - choice options e go to config adb/sdk_options/Licensys agree licenses
-     - execute ```code .bashrc``` or ```code .zshrc``` past in last lines
-       - ```
-          export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
-
-          export ANDROID_HOME=$HOME/Android/Sdk
-
-          export PATH=$PATH:$ANDROID_HOME/emulator
-
-          export PATH=$PATH:$ANDROID_HOME/tools
-
-          export PATH=$PATH:$ANDROID_HOME/tools/bin
-
-          export PATH=$PATH:$ANDROID_HOME/platform-tools
-         ```
-     - in /home with terminal execute comand in bash 
-       - ```source .bashrc```
-     
-     - or zsh  
-       - ```source .zshrc```
-         - case problem use
-           - ```sudo code . ~/.zshrc --user-data-dir='.'```
-   - Install dependencies
-     - ```sudo apt install android-tools-adb android-tools-fastboot```
-   
-   - Open Android Studio, install emulator and initialized
-     - ```cd android-studio;cd bin;./studio.sh```
-     - in config/sdk_manager/Android_SDK/SDK_tools
-       - ```select Google play licenses sdk tools```
-       - ```acept terms```
-     - in config/abd_manager/initialized one emulator
-   - Common Problemns
-     - Unable to load script from assets 'index.android.bundle'. Make sure...
-       * Esse erro geralmente acontece porque o sistema não conseguiu criar o bundle inicial que contém todo o código Javascript da aplicação. Para resolver comece criando uma pasta ```assets``` dentro da pasta ```android/app/src/main```.
-       * Logo após, execute o comando:
-         - ```npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/```
-        * Agora, feche as abas do terminal e execute novamente o comando:
-          - ```npx react-native run-android``` **or** ```yarn run react-native run-android``` **or** ```yarn android```
    - **Comands commons que salvam xD** 
    - git
      - access develop
