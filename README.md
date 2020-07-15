@@ -63,7 +63,8 @@
           SPACESHIP_CHAR_SUFFIX=" " 
        ```
       - open `.zshrc`, and add file
-        - ```zinit light zdharma/fast-syntax-highlighting
+        - ```
+             zinit light zdharma/fast-syntax-highlighting
              zinit light zsh-users/zsh-autosuggestions
              zinit light zsh-users/zsh-completions
           ```
