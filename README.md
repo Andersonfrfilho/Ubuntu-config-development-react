@@ -40,58 +40,100 @@
 <hr/>
 
 2. Install zsh
+
    - Update the packages
+
       - ```sudo apt update```
+
    - Install zsh
+
       - ```sudo apt install zsh```
+
    - Install curl 
+
      - ```sudo apt install curl```
+
    - Install git
+
      - ```sudo apt install git-all```
+
    - Zsh default terminal
+
      - ```chsh -s $(which zsh)```
+
    - Install Firacode font
+
      - download in repository
+
        - ```https://github.com/tonsky/FiraCode```   
+
    - Install Oh my zsh
+
      - ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
+
    - Install SpaceshipTheme
      - clone reposiory in ~
+
        - ```git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"```
-     - linking repository
-       - ```ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"```
+
+       - linking repository
+
+  - Theme dracula in terminal
+
+     - This theme can be installed on Gnome 3 terminal and any other Gnome based terminal program like the Unity terminal bundled with Ubuntu.
+
+     - You'll need the dconf command (if you run a recent Gnome version). In Ubuntu,this can be installed by running:
+
+       - ```sudo apt-get install dconf-cli```
+
+     - In other distros you'll need to dig around to find it, search your repositories for dconf related packages.
+
+     - After installing dconf, you can clone this repository to your machine.
+
+       - ```git clone https://github.com/dracula/gnome-terminal```
+
+     - Then you can run the installation script:
+
+      - ```./install.sh```
+
+    - Install spaceship
+
+      - ```git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"```
+      
+      - ```ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"```
+    
     - Instal visual code
+
       - download visual studio code
+
         - ```https://code.visualstudio.com/download```
+
       - open folder download archive
+
       - run command
+
         - ```sudo dpkg -i code...```
-    - Gnome Terminal
-      - Install
-      - This theme can be installed on Gnome 3 terminal and any other Gnome based terminal program like the Unity terminal bundled with Ubuntu.
 
-      - You'll need the dconf command (if you run a recent Gnome version). In Ubuntu,this can be installed by running:
-
-      - $ sudo apt-get install dconf-cli
-      - In other distros you'll need to dig around to find it, search your repositories for dconf related packages.
-
-      - After installing dconf, you can clone this repository to your machine.
-
-      - $ git clone https://github.com/dracula/gnome-terminal
-      - $ cd gnome-terminal
-      - Then you can run the installation script:
-
-      - $ ./install.sh
     - Configure theme zsh
+
       - in folder ~ with terminal
+
         - ```code ./.zshrc```
+
       - in file replace `ZSH_THEME="robbyrussell"`
+
         - ```ZSH_THEME="spaceship"```
+
     - Install plugins zsh
+
       - run comand
+
         - ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"```
+
       - restart terminal
+
       - open zshrc add in file
+      
     - ```
           SPACESHIP_PROMPT_ORDER=(
           user          # Username section
@@ -122,7 +164,8 @@
       - run command
         - ```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash```
       - add file profile enviroment variable nvm past in .zshrc or .bashrc
-        - ```export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+        - ```
+             export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
              [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
           ```
       - install node 
@@ -292,7 +335,7 @@
    - Node
      - kill process nodeJs
        * case netstat command not found
-         - ``sudo apt-get install net-tools```
+         - ```sudo apt-get install net-tools```
        - see a process in port
          * ```sudo netstat -lpn |grep :'3000'```
        - kill the id process without aspas
