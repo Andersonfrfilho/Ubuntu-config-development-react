@@ -1,9 +1,42 @@
 # Linux-Zsh-GNU-Ubuntu-config-development 
   - (GNU=Ubuntu config)(Linux=[terminal,zsh]) - RUFUS
 
+  <p align="center">
+    <a href="#">
+      <img src="./images/logo.png" alt="logo" style="height: 250px;width:750px; margin-right: 10px;">
+    </a>
+    <h3 align="center">Configuration development - NodeJs | ReactJs | React-Native </h3>
+  </p>
+
 1. mount pendrive boot with gpt
    * obs: due to the new 9th generation processors and processes, we must use the following pen drive boot configurations using the rufus, important
-   
+   - select **(GPT) partition scheme
+
+    <p align="center">
+      <img src="./images/pen-drive-boot.png" alt="Markdown Monster icon" style="height: 550px;width:450px; margin-right: 10px;">
+    </p>
+    <br/>
+   - select **(GPT) partition scheme
+
+    <p align="center">
+      <img src="./images/part-1.png" alt="Markdown Monster icon" style="height: 450px;width:550px; margin-right: 10px;">
+    </p>
+    <br/>
+   - in partition manager select steps select type instalation size(32mb~=550mb)type-partition(primary)Use as EFI()
+    <p align="center">
+      <img src="./images/part-2.png" alt="Markdown Monster icon" style="height: 450px;width:550px; margin-right: 10px;">
+    </p>
+    <br/>
+   - create second partition swap this partition manager bootloader in your system Use as(swap), type(Primary) size:double memory ram
+    <p align="center">
+      <img src="./images/part-3.png" alt="Markdown Monster icon" style="height: 450px;width:550px; margin-right: 10px;">
+    </p>
+    <br/>
+   - create root partition / <- root partition memory total
+    <p align="center">
+      <img src="./images/part-4.png" alt="Markdown Monster icon" style="height: 450px;width:550px; margin-right: 10px;">
+    </p>
+    <br/>
 <hr/>
 
 2. Install zsh
