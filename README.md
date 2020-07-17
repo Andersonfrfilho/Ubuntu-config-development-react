@@ -230,7 +230,9 @@
   <hr/>
 
     - Configure visual code
+
       - `shift` + `ctrl` + `p` find JSON preferenes
+
       - ```json
           {
             //Defini o tema e icones
@@ -293,6 +295,7 @@
             },
           }
         ```
+        
     - Extensions
       * [carbon-now-sh](https://marketplace.visualstudio.com/items?itemName=ericadamski.carbon-now-sh)
       * [Code autocomplete](https://marketplace.visualstudio.com/items?itemName=svipas.code-autocomplete)
