@@ -40,101 +40,59 @@
 <hr/>
 
 2. Install zsh
-
    - Update the packages
-
       - ```sudo apt update```
-
    - Install zsh
-
       - ```sudo apt install zsh```
-
    - Install curl 
-
      - ```sudo apt install curl```
-
    - Install git
-
      - ```sudo apt install git-all```
-
    - Zsh default terminal
-
      - ```chsh -s $(which zsh)```
-
    - Install Firacode font
-
      - download in repository
-
        - ```https://github.com/tonsky/FiraCode```   
-
    - Install Oh my zsh
-
      - ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
-
    - Install SpaceshipTheme
      - clone reposiory in ~
-
        - ```git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"```
-
        - linking repository
-
-  - Theme dracula in terminal
-
+   - Theme dracula in terminal
      - This theme can be installed on Gnome 3 terminal and any other Gnome based terminal program like the Unity terminal bundled with Ubuntu.
-
      - You'll need the dconf command (if you run a recent Gnome version). In Ubuntu,this can be installed by running:
-
        - ```sudo apt-get install dconf-cli```
-
      - In other distros you'll need to dig around to find it, search your repositories for dconf related packages.
-
      - After installing dconf, you can clone this repository to your machine.
-
        - ```git clone https://github.com/dracula/gnome-terminal```
-
      - Then you can run the installation script:
+       - ```./install.sh```
 
-      - ```./install.sh```
-
-    - Install spaceship
-
-      - ```git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"```
-      
-      - ```ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"```
+   - Install spaceship
+     - run command
+       - ```git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"```
+     - run command
+        - ```ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"```
     
-    - Instal visual code
+   - Instal visual code
+     - download visual studio code
+       - ```https://code.visualstudio.com/download```
+     - open folder download archive
+     - run command
+       - ```sudo dpkg -i code...```
 
-      - download visual studio code
-
-        - ```https://code.visualstudio.com/download```
-
-      - open folder download archive
-
-      - run command
-
-        - ```sudo dpkg -i code...```
-
-    - Configure theme zsh
-
-      - in folder ~ with terminal
-
-        - ```code ./.zshrc```
-
-      - in file replace `ZSH_THEME="robbyrussell"`
-
-        - ```ZSH_THEME="spaceship"```
-
-    - Install plugins zsh
-
-      - run comand
-
-        - ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"```
-
-      - restart terminal
-
-      - open zshrc add in file
-      
-    - ```
+   - Configure theme zsh
+     - in folder ~ with terminal
+       - ```code ./.zshrc```
+     - in file replace `ZSH_THEME="robbyrussell"`
+       - ```ZSH_THEME="spaceship"```
+   - Install plugins zsh
+     - run comand
+       - ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"```
+       - restart terminal
+       - open zshrc add in file
+   - ```zshrc
           SPACESHIP_PROMPT_ORDER=(
           user          # Username section
           dir           # Current directory section
@@ -153,8 +111,8 @@
           SPACESHIP_CHAR_SYMBOL="❯"
           SPACESHIP_CHAR_SUFFIX=" " 
        ```
-      - open `.zshrc`, and add file
-        - ```
+     - open `.zshrc`, and add file
+       - ```
              zinit light zdharma/fast-syntax-highlighting
              zinit light zsh-users/zsh-autosuggestions
              zinit light zsh-users/zsh-completions
