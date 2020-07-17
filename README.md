@@ -97,7 +97,7 @@
 
       <hr/>
          
-   - Instal visual code
+   - Instal [Visual Studio Code](https://code.visualstudio.com/download)
      - download visual studio code
        - ```https://code.visualstudio.com/download```
      - open folder download archive
@@ -106,7 +106,7 @@
 
       <hr/>
        
-   - Using Spaceship
+   - Using [Spaceship](https://github.com/denysdovhan/spaceship-prompt)
      - run command in directory `~` <- this directory /home/your_user
        - ```code .zshrc```
      - Set ZSH_THEME="spaceship" in your .zshrc.
@@ -197,6 +197,8 @@
       - install drives x86
         - ```sudo apt-get install gcc-multilib lib32z1 lib32stdc++6```
 
+      <hr/>
+
     - Install [Android Stuio](https://developer.android.com/studio)
       - download Android Studio.tar.gz
       - extract file in directori `~` where home/user
@@ -224,6 +226,9 @@
       - select JAVA_HOME
       - using visual code for open files ```sudo code . --user-data-dir='.'```
       - add variables envoriment in bash/.bashrc file
+
+  <hr/>
+
     - Configure visual code
       - `shift` + `ctrl` + `p` find JSON preferenes
       - ```json
@@ -336,8 +341,7 @@
      - ```docker --version```
    * Referencies
      - ```https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket```
-  - Install insomnia
-  - install spotify
+
    * **Optional**
    * Install docker-compose 
      - ```sudo apt install docker-compose```
@@ -364,7 +368,15 @@
      - este comando troca para o docker local
      - ```eval "$(docker-machine env -u)"```
 <hr/>
-   
+
+  - Install insomnia
+
+  <hr/>
+
+  - install spotify
+
+  <hr/>
+  
    - **Comands commons que salvam xD** 
    - git
      - access develop
