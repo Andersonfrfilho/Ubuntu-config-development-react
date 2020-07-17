@@ -160,80 +160,80 @@
           ```
       - restart terminal
 
-      <hr/>
+   <hr/>
 
-    - Install [Nvm](https://github.com/nvm-sh/nvm)
-      - run command
-        - ```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash```
-      - Add file profile enviroment variable nvm past in `.zshrc` or `.bashrc`
-        - ```
-             export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-          ```
-      - Install node 
-        - ```nvm install --lts```
-      - use node
-        - ```nvm use --lts```
+   - Install [Nvm](https://github.com/nvm-sh/nvm)
+     - run command
+       - ```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash```
+     - Add file profile enviroment variable nvm past in `.zshrc` or `.bashrc`
+       - ```
+            export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+         ```
+     - Install node 
+       - ```nvm install --lts```
+     - use node
+       - ```nvm use --lts```
 
-      <hr/>
+   <hr/>
 
-    - Install [Yarn](https://classic.yarnpkg.com/pt-BR/docs/install)
-      - run comand to add package repository
-        - ```curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -```
-      - write file
-        - ```echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list```
-      - install yarn
-        - ```sudo apt update && sudo apt install --no-install-recommends yarn```
+   - Install [Yarn](https://classic.yarnpkg.com/pt-BR/docs/install)
+     - run comand to add package repository
+       - ```curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -```
+     - write file
+       - ```echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list```
+     - install yarn
+       - ```sudo apt update && sudo apt install --no-install-recommends yarn```
 
-      <hr/>
+   <hr/>
 
-    - Install JDK8 -> java development kit
-      - add package
-        - ```sudo add-apt-repository ppa:openjdk-r/ppa```
-      - update packages
-        - ```sudo apt-get update```
-      - install package
-        - ```sudo apt-get install openjdk-8-jdk```
-      - install drives x86
-        - ```sudo apt-get install gcc-multilib lib32z1 lib32stdc++6```
+   - Install JDK8 -> java development kit
+     - add package
+       - ```sudo add-apt-repository ppa:openjdk-r/ppa```
+     - update packages
+       - ```sudo apt-get update```
+     - install package
+       - ```sudo apt-get install openjdk-8-jdk```
+     - install drives x86
+       - ```sudo apt-get install gcc-multilib lib32z1 lib32stdc++6```
 
-      <hr/>
+   <hr/>
 
-    - Install [Android Stuio](https://developer.android.com/studio)
-      - download Android Studio.tar.gz
-      - extract file in directori `~` where home/user
-      - create a file in `~/Android/Sdk`
-      - add profile file `.zshrc`
-      - java default `/usr/lib/jvm/java-8-openjdk-amd64`
-      - ```
-           export JAVA_HOME=CAMINHO_ANOTADO_COM_SUA_VERSÃO
-           export ANDROID_HOME=~/Android/Sdk
-           export PATH=$PATH:$ANDROID_HOME/emulator
-           export PATH=$PATH:$ANDROID_HOME/tools
-           export PATH=$PATH:$ANDROID_HOME/tools/bin
-           export PATH=$PATH:$ANDROID_HOME/platform-tools
-           # emiter shorcut Android studio
-           export PATH=$PATH:~/android-studio/bin
+   - Install [Android Stuio](https://developer.android.com/studio)
+     - download Android Studio.tar.gz
+     - extract file in directori `~` where home/user
+     - create a file in `~/Android/Sdk`
+     - add profile file `.zshrc`
+     - java default `/usr/lib/jvm/java-8-openjdk-amd64`
+
+     - ```
+        export JAVA_HOME=CAMINHO_ANOTADO_COM_SUA_VERSÃO
+        export ANDROID_HOME=~/Android/Sdk
+        export PATH=$PATH:$ANDROID_HOME/emulator
+        export PATH=$PATH:$ANDROID_HOME/tools
+        export PATH=$PATH:$ANDROID_HOME/tools/bin
+        export PATH=$PATH:$ANDROID_HOME/platform-tools
+        # emiter shorcut Android studio
+        export PATH=$PATH:~/android-studio/bin
         ```
-      - add in before alias coment ```alias sudo='sudo env PATH=$PATH $@'```
-      - run terminal ```studio.sh```
-      - add proxy
-      - automatic proxy
-      - not import config
-      - send realtory
-      - (welcome) next
-      - (install type) custom
-      - select JAVA_HOME
-      - using visual code for open files ```sudo code . --user-data-dir='.'```
-      - add variables envoriment in bash/.bashrc file
-
+     - run terminal `studio.sh`
+     - add proxy
+     - automatic proxy
+     - not import config
+     - send realtory
+     - (welcome) next
+     - (install type) custom
+     - select JAVA_HOME
+     - using visual code for open files `sudo code . --user-data-dir='.'`
+     - add variables envoriment in bash/.bashrc file
+  
   <hr/>
 
-    - Configure visual code
+   - Configure visual code
 
-      - `shift` + `ctrl` + `p` find JSON preferenes
+     - `shift` + `ctrl` + `p` find JSON preferenes
 
-      - ```json
+     - ```json
           {
             //Defini o tema e icones
             "workbench.colorTheme": "Dracula",
@@ -294,31 +294,53 @@
               "*.proto": "3d"
             },
           }
-        ```
-        
-    - Extensions
-      * [carbon-now-sh](https://marketplace.visualstudio.com/items?itemName=ericadamski.carbon-now-sh)
-      * [Code autocomplete](https://marketplace.visualstudio.com/items?itemName=svipas.code-autocomplete)
-      * [Color Highlighting](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
-      * [Color picker](https://marketplace.visualstudio.com/items?itemName=anseki.vscode-color)
-      * [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
-      * [Code spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-      * [DotEnv](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
-      * [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-      * [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-      * [Git history](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
-      * [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
-      * [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
-      * [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
-        - install extensions live shared
-          - ```wget -O ~/vsls-reqs https://aka.ms/vsls-linux-prereq-script && chmod +x ~/vsls-reqs && ~/vsls-reqs```
-      * [MarkDown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
-      * [Material Icon theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
-      * [Omni Theme](https://marketplace.visualstudio.com/items?itemName=rocketseat.theme-omni)
-      * [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-      * [Preview](https://marketplace.visualstudio.com/items?itemName=searKing.preview-vscode)
-      * [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
-      * [docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+          ```
+
+     - Extensions
+       
+       * [carbon-now-sh](https://marketplace.visualstudio.com/items?itemName=ericadamski.carbon-now-sh)
+       
+       * [Code autocomplete](https://marketplace.visualstudio.com/items?itemName=svipas.code-autocomplete)
+      
+       * [Color Highlighting](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
+       
+       * [Color picker](https://marketplace.visualstudio.com/items?itemName=anseki.vscode-color)
+
+       * [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
+
+       * [Code spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+
+       * [DotEnv](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
+      
+       * [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+
+       * [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+      
+       * [Git history](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
+       
+       * [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+       
+       * [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
+       
+       * [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
+    
+          - install extensions live shared
+
+            - ```wget -O ~/vsls-reqs https://aka.ms/vsls-linux-prereq-script && chmod +x ~/vsls-reqs && ~/vsls-reqs```
+
+       * [MarkDown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
+       
+       * [Material Icon theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+
+       * [Omni Theme](https://marketplace.visualstudio.com/items?itemName=rocketseat.theme-omni)
+       
+       * [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+       
+       * [Preview](https://marketplace.visualstudio.com/items?itemName=searKing.preview-vscode)
+       
+       * [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
+       
+       * [docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
 
 <hr/> 
 
