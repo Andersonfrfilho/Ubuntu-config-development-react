@@ -240,7 +240,7 @@
             "workbench.iconTheme": "material-icon-theme",
             //Aumenta font terminal
             "terminal.integrated.fontSize":14,
-
+            "workbench.editor.enablePreview": false,
             //Configura tamanho e familia da fonte
             "editor.tabSize":2,
             "editor.fontSize": 14,
