@@ -341,6 +341,12 @@
        * [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
        
        * [docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+       
+       * [handlebars](https://marketplace.visualstudio.com/items?itemName=andrejunges.Handlebars)
+         * [install](ext install andrejunges.Handlebars)
+       
+       * [handlebars - preview](https://marketplace.visualstudio.com/items?itemName=greenbyte.handlebars-preview)
+         * [install](https://marketplace.visualstudio.com/items?itemName=greenbyte.handlebars-preview)
 
 <hr/> 
 
