@@ -346,7 +346,7 @@
          * [install](ext install andrejunges.Handlebars)
        
        * [handlebars - preview](https://marketplace.visualstudio.com/items?itemName=greenbyte.handlebars-preview)
-         * [install](https://marketplace.visualstudio.com/items?itemName=greenbyte.handlebars-preview)
+         * [install](ext install andrejunges.Handlebars)
 
 <hr/> 
 
