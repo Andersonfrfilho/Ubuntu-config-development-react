@@ -443,3 +443,8 @@
      * possiveis erros
      * 17502:0812/101639.918679:FATAL:setuid_sandbox_host.cc(158)] The SUID sandbox helper binary was found, but is not configured correctly. Rather than run without sandboxing I'm aborting now. You need to make sure that /home/miyazaki/Documents/gluco/glucogear-device-upload/node_modules/electron/dist/chrome-sandbox is owned by root and has mode 4755.
        * ```CONFIG_USER_NS=y enables the user namespaces feature, but they're still restricted to privileged users by default. This suggests sysctl kernel.unprivileged_userns_clone=1```
+# The art of debugging issues
+  - Check what the error is
+  - Check your code against mine
+  - Open Google and search for the error
+  - Report it in course's forums
