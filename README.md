@@ -448,3 +448,7 @@
   - Check your code against mine
   - Open Google and search for the error
   - Report it in course's forums
+# Include as much details as you can
+  - Errors the bug produced
+  - The file(s) with the issue
+  - The time in the lecture where the error occurs
