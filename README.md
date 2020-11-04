@@ -309,6 +309,10 @@
        * [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
 
        * [Code spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+         
+         *[Brazilian Portuguese - Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker-portuguese-brazilian)
+         
+         *[Fullstack - Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=rbalet.code-spell-checker-fullstack)
 
        * [DotEnv](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
       
