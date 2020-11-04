@@ -247,6 +247,7 @@
             "editor.lineHeight": 24,
             "editor.fontFamily": "Fira Code",
             "editor.fontLigatures":true,
+            "cSpell.language": "en,pt,pt_BR",
 
             "explorer.compactFolders": false,
             "editor.renderLineHighlight":"gutter",
