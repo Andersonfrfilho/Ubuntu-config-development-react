@@ -60,6 +60,8 @@
        
    - [Zsh](https://www.zsh.org/) default terminal
      - ```chsh -s $(which zsh)```
+     - reload system
+     - option 2 
 
       <hr/>
        
