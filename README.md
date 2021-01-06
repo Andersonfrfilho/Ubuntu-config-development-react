@@ -459,3 +459,5 @@
   - Errors the bug produced
   - The file(s) with the issue
   - The time in the lecture where the error occurs
+# left show apllication tolbar
+  - gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
