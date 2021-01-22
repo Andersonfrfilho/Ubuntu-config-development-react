@@ -461,3 +461,5 @@
   - The time in the lecture where the error occurs
 # left show apllication tolbar
   - gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
+# emulator or views emulators
+* https://github.com/Genymobile/scrcpy
