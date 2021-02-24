@@ -43,7 +43,16 @@
 
    - Update the packages
       - ```sudo apt update```
-
+   - Install komo
+      - ```https://github.com/cheesecakeufo/komorebi```
+      - sudo dpkg -i package
+      - download video
+      - https://mylivewallpapers.com/movies/the-matrix-animated-wallpaper/
+      - create wallpaper with wallpaper creator
+      - sudo mv home/name_wallpaper /System/Resources/Komorebi
+      - change file .komorebi
+      - change name wallpaper
+      
       <hr/>
        
    - Install [Zsh](https://www.zsh.org/)
