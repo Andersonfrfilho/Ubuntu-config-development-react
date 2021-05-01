@@ -247,7 +247,7 @@
      - ```json
           {
             //Defini o tema e icones
-            "workbench.colorTheme": "Dracula",
+            "workbench.colorTheme": "Omni",
             "workbench.iconTheme": "material-icon-theme",
             //Aumenta font terminal
             "terminal.integrated.fontSize":14,
