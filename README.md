@@ -421,7 +421,7 @@
   <hr/>
 
   - install spotify
-
+  - Flat Remix
   <hr/>
   
    - **Comands commons que salvam xD** 
