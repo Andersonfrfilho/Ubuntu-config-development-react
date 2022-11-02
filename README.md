@@ -472,3 +472,16 @@
   - gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
 # emulator or views emulators
 * https://github.com/Genymobile/scrcpy
+
+git config
+
+```gitconfig
+[alias]
+	s = !git status -s
+	c = !git add --all && git commit -m 
+	l = !git log --pretty=format:'%C(blue)%h%C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
+[core]
+	editor = \"C:\\Users\\ander\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
+[safe]
+	directory = D:/project/cherry-go-backend
+```
