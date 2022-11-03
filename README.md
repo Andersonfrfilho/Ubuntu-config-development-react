@@ -475,6 +475,10 @@
 
 git config
 
+- config editor:
+  - `git config --global --global core.editor code`
+  - `git config --global --edit`
+
 ```gitconfig
 [alias]
 	s = !git status -s
@@ -484,4 +488,6 @@ git config
 	editor = \"C:\\Users\\ander\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
 [safe]
 	directory = D:/project/cherry-go-backend
+[core]
+	editor = code --wait
 ```
