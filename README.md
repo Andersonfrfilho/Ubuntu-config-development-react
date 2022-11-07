@@ -491,3 +491,8 @@ git config
 [core]
 	editor = code --wait
 ```
+
+```sh
+emulator -no-snapshot -avd pixel-6-pro
+```
+
